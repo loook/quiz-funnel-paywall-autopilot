@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE}}</title>
+<style>
+:root{--bg:#f2f5f5;--surface:#fff;--fg:#14201f;--muted:#55676a;--line:#d6dfdf;--accent:#17655b;--accent-soft:#dcefeb;--warn:#9a4a06;--warn-soft:#fbead6;--f:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1515;--surface:#162120;--fg:#e5eeed;--muted:#94a8a6;--line:#263837;--accent:#62c6b4;--accent-soft:#15332f;--warn:#f0a35e;--warn-soft:#34240f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1515;--surface:#162120;--fg:#e5eeed;--muted:#94a8a6;--line:#263837;--accent:#62c6b4;--accent-soft:#15332f;--warn:#f0a35e;--warn-soft:#34240f;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f);font-size:15px;line-height:1.55;margin:0;padding:28px 16px 64px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{margin:0;line-height:1.2;text-wrap:balance}
+h1{font-size:clamp(26px,5vw,36px)}h2{font-size:22px}h3{font-size:16px}
+p{margin:0;max-width:72ch}
+.sub{color:var(--muted)}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+section.funnel{display:flex;flex-direction:column;gap:16px;min-width:0;border-top:1px solid var(--line);padding-top:24px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:12.5px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+s{color:var(--muted)}
+.strip{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x proximity}
+.strip figure{margin:0;flex:0 0 200px;scroll-snap-align:start;display:flex;flex-direction:column;gap:6px}
+.strip img{width:200px;height:auto;border-radius:12px;border:1px solid var(--line);display:block;background:var(--surface)}
+.strip figcaption{font-size:13px;color:var(--muted)}
+dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 28px;margin:0}
+dl div{display:grid;grid-template-columns:140px 1fr;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);min-width:0}
+dt{color:var(--muted);font-size:13px}dd{margin:0;min-width:0;overflow-wrap:anywhere}
+@media (max-width:480px){dl div{grid-template-columns:1fr;gap:2px}}
+ul{margin:0;padding-left:1.15em;display:flex;flex-direction:column;gap:6px;max-width:76ch}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.two>div{min-width:0;display:flex;flex-direction:column;gap:8px}
+</style>
+<div class="wrap">
+<header style="display:flex;flex-direction:column;gap:8px">
+<div class="eyebrow">{{EYEBROW}}</div>
+<h1>{{TITLE}}</h1>
+<p class="sub">{{SUBTITLE}}</p>
+</header>
+{{CONTENT}}
+</div>

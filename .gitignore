@@ -1,0 +1,11 @@
+# private brand notes
+skills/quiz-funnel-paywall-autopilot/known-funnels.md
+# run outputs
+data.json
+overview.html
+!skills/quiz-funnel-paywall-autopilot/templates/overview.html
+report.md
+screens/
+*.zip
+.DS_Store
+__pycache__/

@@ -1,0 +1,5 @@
+{
+  "name": "quiz-funnel-paywall-autopilot",
+  "version": "1.0.0",
+  "description": "Audit a web-to-app quiz funnel to its paywall in a mobile-size browser: optimized JS autopilot or full screen-by-screen audit. Fake data, a disclosed email per session, never purchases."
+}
